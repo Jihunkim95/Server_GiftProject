@@ -60,6 +60,6 @@ app.get('/api/get-times', (req, res) => {
 });
 
 // 서버 시작
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(port,'0.0.0.0', () => {
+  console.log(`Server running on ${port}`);
 });
