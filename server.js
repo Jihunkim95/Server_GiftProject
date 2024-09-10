@@ -59,6 +59,11 @@ app.get('/api/get-times', (req, res) => {
   });
 });
 
+app.get('/test', (req, res) => {
+  console.log("test");
+
+});
+
 // 서버 시작
 app.listen(port,'0.0.0.0', () => {
   console.log(`Server running on ${port}`);
