@@ -8,8 +8,16 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000; // .env 파일에서 포트 번호 불러오기
 
+const corsOptions = {
+  origin: '*', // 모든 출처 허용
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
 // 미들웨어 설정
-app.use(cors());
+// app.use(cors());
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // MySQL 데이터베이스 연결 설정
